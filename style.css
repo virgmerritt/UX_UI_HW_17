@@ -1,15 +1,16 @@
-.class= inline-block {
-    display: inline block; vertical-align: top;
- }
- .div{
-    .class=logo; width: 23%; padding: 1%; text-align: center;
+.inline-block {
+    display: inline-block; vertical-align: top;
  }
 
- nav {
+.logo {
+     width: 23%; padding: 1%; text-align: center;
+ }
+
+.nav {
     width: 73%; padding: 1%;
  }
 
- ul { 
+.ul { 
     width: 50%; margin-left: auto ;
  }
 
@@ -29,7 +30,7 @@
     padding: center;
 }
 
-ul {
+.ul {
     display: inline-block;
     vertical-align: top;
     padding: center;

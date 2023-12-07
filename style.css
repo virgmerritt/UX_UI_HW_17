@@ -41,10 +41,10 @@ nav {
     transform: translateY(50%);
 }
   
-  nav > a:first-of-type > img {
+nav img {
     justify-content: flex-start;
     width: 100px;
-  }
+}
 
 nav > a:not(:first-of-type) {
     padding: 5px 50px;

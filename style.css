@@ -18,6 +18,12 @@ nav {
     justify-content: flex-end;
     gap: 10px;
     padding: 10px;
+    max-width: 1400px;
+    margin: 0 auto;
+}
+
+nav > a:first-of-type {
+    flex-grow: 1;
 }
 
 .rectangle1 {
@@ -65,8 +71,9 @@ nav > a:not(:first-of-type) {
     justify-content: flex-end;
     align-items: center;
     position: relative;
-    top: 175px;
+    top: -8px;
     z-index: 1;
+    left: 70%;
 }
 
 h1 {
@@ -76,6 +83,18 @@ h1 {
     font-weight: 600;
     line-height: normal;
     color: #333333;
+}
+
+h2 {
+    width: 234px;
+    height: 33px;
+    font-family: 'Manrope', sans-serif;
+    font-size: 48px;
+    font-weight: 500;
+    line-height: normal;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 p {width: 746px;
@@ -88,30 +107,17 @@ p {width: 746px;
     font-weight: 500;
     line-height: normal;}
 
-h2 {
-        width: 234px;
-        height: 33px;
-        font-family: 'Manrope', sans-serif;
-        font-size: 48px;
-        font-weight: 500;
-        line-height: normal;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-}
-
 #heroSection {
     position: relative;
+    z-index: 0;
+    width: 100%;
     display: flex;
-    flex-direction: column;
-    justify-content: center;
     align-items: center;
-    text-align: center;
-    background-size: cover;
-    background-position: center center;
-    background-repeat: no-repeat;
-    height: 100vh; 
-    color: #fff; 
+    justify-content: flex-end;
+    gap: 10px;
+    padding: 10px;
+    max-width: 1400px;
+    margin: 0 auto;
 }
 
 #heroSection h1 {
@@ -120,16 +126,15 @@ h2 {
     right: 0;
     top: 50%;
     transform: translateY(-50%);
-    font-size: 2em;
 }
 
 #heroSection p {
     position: absolute;
     left: 0;
     right: 0;
-    top: 70%;
+    top: 75%;
+    justify-content: flex-start;
     transform: translateY(-50%);
-    font-size: 1.5em;
 }
 
 #heroSection img {
@@ -291,56 +296,49 @@ h2 {
         align-content: end;
       }
 
-    .footer {
-            bottom: 0;
-            left: 0;
-            z-index: 10;
-        }
-
-      .footer #footerlogo {
-        width: 99.815px;
-        height: 55px;
-        flex-shrink: 0;
+      footer {
+        position: relative;
+        z-index: 0;
+        width: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: space-evenly;
+        gap: 10px;
+        padding: 10px;
+        max-width: 1400px;
+        margin: 0 auto;
       }
-
-      .footer p {
-        color: #333;
+      
+      footer > a:first-of-type {
+        flex-grow: 1;
+      }
+      
+      .rectanglefooter {
+        content: "";
+        position: absolute;
+        z-index: -2;
+        height: 100%;
+        left: -300%;
+        right: -300%;
+        background-color: #e5ff16;
+        transform: translateY(50%);
+      }
+      
+      footer img {
+        justify-content: flex-start;
+        width: 100px;
+      }
+      
+    footer > a:not(:first-of-type) {
+        padding: 5px 50px;
+        border-radius: 50px;
+        background-color: #c99eed;
+        color: #333333;
         text-align: center;
-        font-family: 'Manrope', sans-serif;
+        font-family: Manrope;
         font-size: 24px;
         font-style: normal;
-        font-weight: 500;
+        font-weight: 800;
         line-height: normal;
-      }
-
-      .footer #email {
-        width: 69.915px;
-        height: 55px;
-        flex-shrink: 0;
-      }
-
-      .footer #ig {
-        width: 55px;
-        height: 55px;
-        flex-shrink: 0;
-      }
-
-      .footer #linkedIn {
-        width: 53.947px;
-        height: 53.779px;
-        flex-shrink: 0;
-        fill: #333;
-      }
-
-      .footer #behance {
-        width: 88.611px;
-        height: 55px;
-        flex-shrink: 0;
-      }
-
-      #footerbar {
-        width: 1446px;
-        height: 123px;
-        flex-shrink: 0;
-        background: #E5FF16;
+        text-decoration: none;
       }

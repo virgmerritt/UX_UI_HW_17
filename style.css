@@ -37,9 +37,8 @@ nav > a:first-of-type {
 }
 
 .rectangle2 {
-    content: "";
     position: absolute;
-    z-index: -2;
+    z-index: -1;
     height: 100%;
     left: -300%;
     right: -300%;
@@ -70,10 +69,10 @@ nav > a:not(:first-of-type) {
     padding: 5px 100px;
     justify-content: flex-end;
     align-items: center;
-    position: relative;
-    top: -8px;
-    z-index: 1;
-    left: 70%;
+    position: absolute;
+    z-index: 2;
+    top: -15px;
+    left: 75%;
 }
 
 h1 {
@@ -86,19 +85,17 @@ h1 {
 }
 
 h2 {
-    width: 234px;
-    height: 33px;
     font-family: 'Manrope', sans-serif;
     font-size: 48px;
     font-weight: 500;
+    color: #333333;
     line-height: normal;
     display: flex;
-    justify-content: center;
+    justify-content: flex-start;
     align-items: center;
 }
 
-p {width: 746px;
-    height: 128px;
+p {
     flex-shrink: 0;
     color: #333333;
     font-family: Manrope;
@@ -109,38 +106,34 @@ p {width: 746px;
 
 #heroSection {
     position: relative;
-    z-index: 0;
+    z-index: -1;
     width: 100%;
     display: flex;
     align-items: center;
-    justify-content: flex-end;
+    justify-content: center;
     gap: 10px;
     padding: 10px;
+    height: 100%;
     max-width: 1400px;
     margin: 0 auto;
 }
 
-#heroSection h1 {
-    position: absolute;
-    left: 0;
-    right: 0;
-    top: 50%;
-    transform: translateY(-50%);
-}
-
-#heroSection p {
-    position: absolute;
-    left: 0;
-    right: 0;
-    top: 75%;
-    justify-content: flex-start;
-    transform: translateY(-50%);
-}
-
 #heroSection img {
-    max-width: 100%;
-    height: auto;
-    margin-top: 20px;
+    max-width: 1440px;
+    height: auto; /* Adjust based on your design */
+    margin-top: 10px;
+    position: relative; /* Keep it relative to make it part of the document flow */
+    z-index: 0; /* Adjust based on other stacking elements */
+}
+
+.Herotext {
+    width: 736px;
+    height: 324px;
+    position: absolute;
+    z-index: 1;
+    top: 10%; /* Adjust as needed */
+    left: 2%;
+    transform: translateY(10%);
 }
 
 .container {
@@ -156,13 +149,19 @@ p {width: 746px;
 }
 
 .card h1 {
+    display: flex;
     font-size: 24px;
     font-weight: bold;
+    justify-content: center;
+    align-items: center;
 }
 
-.card p {
+.card h2 {
+    display: flex;
     font-size: 16px;
     text-align: center;
+    justify-content: center;
+    align-items: center;
 }
 
 .card button {
@@ -213,13 +212,36 @@ p {width: 746px;
 }
 
 #BCKHighlight {
+    position: relative;
+    z-index: -1;
+    width: 100%;
     display: flex;
-    text-align: center;
+    align-items: center;
     justify-content: center;
-    align-content: center;
-    width: 1447px;
-    height: 822px;
-    flex-shrink: 0;
+    gap: 10px;
+    padding: 10px;
+    max-width: 1400px;
+    margin: 0 auto;
+}
+
+#BCKHighlight h1 {
+    position: absolute;
+    text-align: center;
+    top: 25%;
+    transform: translateY(-50%);
+}
+
+#BCKHighlight h2 {
+    position: absolute;
+    text-align: center;
+    top: 5%;
+    justify-content: center;
+    transform: translateY(-50%);
+}
+
+#BCKHighlight img {
+    max-width: 100%;
+    height: auto;
 }
 
 #FromPrintToWeb {
@@ -228,7 +250,7 @@ p {width: 746px;
     align-content: center;
     background-color: #E9DDD7;
     width: 1444px; 
-    height: 1024px;
+    height: 100vh;
     flex-shrink: 0;
 }
 
@@ -243,7 +265,7 @@ p {width: 746px;
     margin: 0px 10%;
     display: grid;
     padding: 4px;
-    grid-template-rows: 300px 300px 300px 300px 300px;
+    grid-template-rows: 300px 300px 300px;
     grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
     grid-template-areas:  
         "edGov edGov typesetting wireframe wireframe"
@@ -302,9 +324,9 @@ p {width: 746px;
         width: 100%;
         display: flex;
         align-items: center;
-        justify-content: space-evenly;
-        gap: 10px;
-        padding: 10px;
+        justify-content: center;
+        gap: 50px;
+        padding: 40px;
         max-width: 1400px;
         margin: 0 auto;
       }
@@ -314,14 +336,12 @@ p {width: 746px;
       }
       
       .rectanglefooter {
-        content: "";
         position: absolute;
         z-index: -2;
         height: 100%;
         left: -300%;
         right: -300%;
         background-color: #e5ff16;
-        transform: translateY(50%);
       }
       
       footer img {

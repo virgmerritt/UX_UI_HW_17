@@ -1,8 +1,14 @@
 #navBar {
     display: flex;
     flex-direction: column;
-    height: 25%;
-    background-color: chartreuse;
+    background-color: #333333;
+    width: 1440px;
+    height: 70px;
+    flex-shrink: 0;
+    width: 1446px;
+    height: 84px;
+    flex-shrink: 0;
+    background: #E5FF16;  
 }
 
 .navlogo {
@@ -11,10 +17,236 @@
     width: 25%;
 }
 
-.navigation {
+.navbuttons {
     display: flex;
-    text-decoration: none;
     justify-content: flex-end;
-    align-items: space-evenly;
+    align-content: center;
 }
 
+#buttons li {
+    float: left;
+    list-style: none;
+    text-align: center;
+    background-color: #C99EED;
+    text-decoration: none;
+    border-radius: 50px;
+    display: flex;
+    height: 53px;
+    padding: 10px 50px;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+  }
+
+  #buttons li a {
+    color: #333;
+    text-align: center;
+    font-family: Manrope;
+    font-size: 24px;
+    font-style: normal;
+    font-weight: 800;
+    line-height: normal;
+    text-decoration: none;
+  }
+
+h1 {
+    font-family: Manrope;
+    font-size: 64px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: normal;
+    color: #333333;
+}
+
+p {width: 746px;
+    height: 128px;
+    flex-shrink: 0;
+    color: #333333;
+    font-family: Manrope;
+    font-size: 24px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: normal;}
+
+h2 {
+    width: 234px;
+    height: 33px;
+    flex-shrink: 0;
+    font-family: 'Manrope', sans-serif;
+    font-size: 48px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: normal;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#heroSection {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 1447px;
+        height: 496px;
+        flex-shrink: 0;
+        background-image: url("heroImg.png");
+    }
+
+#casestudycards {
+        width: 1447px;
+        height: 575px;
+        flex-shrink: 0;
+        background-color: #FFFFFF;
+      }
+
+.BCKUnited {
+    width: 430px;
+    height: 500px;
+    flex-shrink: 0;
+    background: linear-gradient(180deg, #EDEDED 0%, #F9F9F9 41.4%);
+}
+
+.Carry-on {
+    width: 430px;
+    height: 500px;
+    flex-shrink: 0;
+    background: #F9F9F9;
+}
+
+.Edgov {
+    width: 430px;
+    height: 500px;
+    flex-shrink: 0;
+    background: linear-gradient(180deg, #EDEDED 0%, #F9F9F9 41.4%);
+}
+
+#BCKHighlight {
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    width: 1447px;
+    height: 822px;
+    flex-shrink: 0;
+}
+
+#FromPrintToWeb {
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    background-color: #E9DDD7;
+    width: 1444px; 
+    height: 1024px;
+    flex-shrink: 0;
+}
+
+#categoryGrid {
+        margin: 0px 5%;
+        display: grid;
+        grid-template-rows: 300px 300px 300px 300px 300px;
+        grid-template-columns: 1fr, 1fr, 1fr, 1fr, 1fr;
+        grid-template-areas:  
+            "edGov, edGov, typesetting, wireframe, wireframe"
+            "edGov, edGov, sign, deboss, deboss"
+            "letterpress, letterpress, BCKiphone, deboss, deboss";
+      }
+      
+     #edGov {
+        grid-area: edGov;
+        background-image: url("ipad ed.gov gallery.png");
+      
+      }
+      #typesetting {
+        grid-area: typesetting;
+        background-image: url("typesetting.png");
+      }
+      
+      #wireframe {
+        grid-area: wireframe;
+        background-image: url("Ed.gov iphone mock up HOME.png");
+      }
+      
+      #sign {
+        grid-area: sign;
+        background-image: url("signage.png");
+      }
+      
+      #deboss {
+        grid-area: deboss;
+        background-image: url("blind emboss.png");
+      }
+      
+      #letterpress {
+        grid-area: letterpress;
+        background-image: url("letterpress.png");
+      }
+
+      #BCKiphone {
+        grid-area: BCKiphone;
+        background-image: url("BCK Mockup iphone.png");
+      }
+
+      .categoryGridArea {
+        background-position: center;
+        background-size: cover;
+        background-repeat: no-repeat;
+        margin: 5px;
+        cursor: pointer;
+        display: grid;
+        align-content: end;
+      }
+
+      .footer {
+        position: absolute; 
+        bottom: 0; 
+        left: 0; 
+        z-index: 10;
+
+      }
+
+      .footer #footerlogo {
+        width: 99.815px;
+        height: 55px;
+        flex-shrink: 0;
+      }
+
+      .footer p {
+        color: #333;
+        text-align: center;
+        font-family: 'Manrope', sans-serif;
+        font-size: 24px;
+        font-style: normal;
+        font-weight: 500;
+        line-height: normal;
+      }
+
+      .footer #email {
+        width: 69.915px;
+        height: 55px;
+        flex-shrink: 0;
+      }
+
+      .footer #ig {
+        width: 55px;
+        height: 55px;
+        flex-shrink: 0;
+      }
+
+      .footer #linkedIn {
+        width: 53.947px;
+        height: 53.779px;
+        flex-shrink: 0;
+        fill: #333;
+      }
+
+      .footer #behance {
+        width: 88.611px;
+        height: 55px;
+        flex-shrink: 0;
+      }
+
+      #footerbar {
+        width: 1446px;
+        height: 123px;
+        flex-shrink: 0;
+        background: #E5FF16;
+      }

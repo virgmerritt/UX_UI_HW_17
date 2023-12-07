@@ -17,36 +17,57 @@ nav {
     align-items: center;
     justify-content: flex-end;
     gap: 10px;
-    padding: 20px;
+    padding: 10px;
 }
 
-nav:before {
+.rectangle1 {
+    position: fixed;
+    z-index: -1;
+    width: 300%;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    background-color: #ffffff;
+}
+
+.rectangle2 {
     content: "";
     position: absolute;
-    z-index: -1;
-    height: 50%;
-    left: -100%;
-    right: -100%;
+    z-index: -2;
+    height: 100%;
+    left: -300%;
+    right: -300%;
     background-color: #E5FF16;
     transform: translateY(50%);
 }
-
-nav > a:not(:first-of-type) {
-    padding: 5px 20px;
-    border-radius: 50px;
-    background-color: #C99EED;
-    color: #333333;
-    text-decoration: none;
-  }
-  
-  nav > a:first-of-type {
-    justify-self: flex-start;
-    flex-grow: 1;
-  }
   
   nav > a:first-of-type > img {
-    width: 250px;
+    justify-content: flex-start;
+    width: 100px;
   }
+
+nav > a:not(:first-of-type) {
+    padding: 5px 50px;
+    border-radius: 50px;
+    background-color: #C99EED;
+    color: #333;
+    text-align: center;
+    font-family: Manrope;
+    font-size: 24px;
+    font-style: normal;
+    font-weight: 800;
+    line-height: normal;
+    text-decoration: none;
+  }
+
+  .helloCircle {
+    padding: 5px 100px;
+    justify-content: flex-end;
+    align-items: center;
+    position: relative;
+    top: 175px;
+    z-index: 1;
+}
 
 h1 {
     font-family: Manrope;

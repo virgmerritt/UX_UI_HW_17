@@ -65,12 +65,14 @@ nav > a:not(:first-of-type) {
     text-decoration: none;
   }
 
+/* Hero Sections */
+
   .helloCircle {
     padding: 5px 100px;
     justify-content: flex-end;
     align-items: center;
     position: absolute;
-    z-index: 2;
+    z-index: 0;
     top: -15px;
     left: 75%;
 }
@@ -106,7 +108,7 @@ p {
 
 #heroSection {
     position: relative;
-    z-index: -1;
+    z-index: 0;
     width: 100%;
     display: flex;
     align-items: center;
@@ -120,10 +122,10 @@ p {
 
 #heroSection img {
     max-width: 1440px;
-    height: auto; /* Adjust based on your design */
+    height: auto;
     margin-top: 10px;
-    position: relative; /* Keep it relative to make it part of the document flow */
-    z-index: 0; /* Adjust based on other stacking elements */
+    position: relative; 
+    z-index: -1;
 }
 
 .Herotext {
@@ -131,10 +133,12 @@ p {
     height: 324px;
     position: absolute;
     z-index: 1;
-    top: 10%; /* Adjust as needed */
+    top: 10%; 
     left: 2%;
     transform: translateY(10%);
 }
+
+/* Case Study Card Section */
 
 .container {
     display: flex;
@@ -211,6 +215,8 @@ p {
     background: linear-gradient(180deg, #EDEDED 0%, #F9F9F9 41.4%);
 }
 
+/* BCK Highlight Section */
+
 #BCKHighlight {
     position: relative;
     z-index: -1;
@@ -244,6 +250,8 @@ p {
     height: auto;
 }
 
+/* From Print to Web Section */
+
 #FromPrintToWeb {
     display: flex;
     justify-content: center;
@@ -260,6 +268,8 @@ p {
     align-items: center;
     height: 100vh;
 }
+
+/* Grid Gallery Section */
 
 #categoryGrid {
     margin: 0px 10%;
@@ -317,6 +327,8 @@ p {
         display: grid;
         align-content: end;
       }
+
+      /* Footer */
 
       footer {
         position: relative;

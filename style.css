@@ -46,10 +46,9 @@ nav > a:first-of-type {
     transform: translateY(50%);
 }
   
-nav img {
+/*Logo*/
+nav img { 
     justify-content: flex-start;
-    position: relative;
-    z-index: -2;
     width: 100px;
 }
 
@@ -75,11 +74,18 @@ nav > a:not(:first-of-type) {
     align-items: center;
     position: absolute;
     z-index: 0;
-    top: -15px;
+    top: 70px;
     left: 75%;
 }
 
-h1 {
+#heroSection h1{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+    max-width: 1400px;
+    margin: 0 auto;
     font-family: Manrope;
     font-size: 64px;
     font-style: normal;
@@ -88,7 +94,7 @@ h1 {
     color: #333333;
 }
 
-h2 {
+#heroSection h2 {
     font-family: 'Manrope', sans-serif;
     font-size: 48px;
     font-weight: 500;
@@ -99,7 +105,7 @@ h2 {
     align-items: center;
 }
 
-p {
+#heroSection p {
     flex-shrink: 0;
     color: #333333;
     font-family: Manrope;
@@ -108,26 +114,13 @@ p {
     font-weight: 500;
     line-height: normal;}
 
-#heroSection {
-    position: relative;
-    z-index: 0;
-    width: 100%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    gap: 10px;
-    padding: 10px;
-    height: 100%;
-    max-width: 1400px;
-    margin: 0 auto;
-}
 
 #heroSection img {
     max-width: 1440px;
     height: auto;
     margin-top: 10px;
     position: relative; 
-    z-index: -1;
+    z-index: -2;
 }
 
 .Herotext {
@@ -143,34 +136,35 @@ p {
 /* Case Study Card Section */
 
 .container {
-    display: flex;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(430px, 1fr));
+    gap: 20px;
     justify-content: center;
-    align-items: center;
-}
-
-.card {
+  }
+  
+  .card {
     text-align: center;
-    margin: 0 10px;
     padding: 10px;
-}
-
-.card h1 {
-    display: flex;
+  }
+  
+  .card h1 {
+    font-size: 64px;
+    font-weight: 600;
+    font-family: 'Manrope', sans-serif;
+    line-height: normal;
+    color: #333333;
+  }
+  
+  .card p {
     font-size: 24px;
-    font-weight: bold;
-    justify-content: center;
-    align-items: center;
-}
-
-.card h2 {
-    display: flex;
-    font-size: 16px;
-    text-align: center;
-    justify-content: center;
-    align-items: center;
-}
-
-.card button {
+    font-weight: 500;
+    font-family: 'Manrope', sans-serif;
+    color: #333333;
+    line-height: normal;
+    margin: 0;
+  }
+  
+  .card button {
     display: inline-flex;
     height: 53px;
     padding: 10px 50px;
@@ -180,7 +174,6 @@ p {
     text-align: center;
     font-family: Manrope;
     font-size: 24px;
-    font-style: normal;
     font-weight: 800;
     line-height: normal;
     gap: 10px;
@@ -188,40 +181,41 @@ p {
     border-radius: 50px;
     border: 1px solid #333;
     background: #FFF;
-    box-shadow: 0px 6px 8px 0px rgba(0, 0, 0, 0.08);
-}
-
-.card img {
+    box-shadow: 0px 6px 8px 0px #00000014;
+    transform: translateY(75%);
+  }
+  
+  .card img {
     max-width: 100%;
-    height: auto;
-}
-
-#BCKUnited {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    transform: translateY(35%);
+  }
+  
+  #BCKUnited, #Carry-on, #Edgov {
     width: 430px;
     height: 500px;
     flex-shrink: 0;
+  }
+  
+  #BCKUnited {
     background: linear-gradient(180deg, #EDEDED 0%, #F9F9F9 41.4%);
-}
-
-#Carry-on {
-    width: 430px;
-    height: 500px;
-    flex-shrink: 0;
+  }
+  
+  #Carry-on {
     background: #F9F9F9;
-}
-
-#Edgov {
-    width: 430px;
-    height: 500px;
-    flex-shrink: 0;
+  }
+  
+  #Edgov {
     background: linear-gradient(180deg, #EDEDED 0%, #F9F9F9 41.4%);
-}
+  }
 
 /* BCK Highlight Section */
 
 #BCKHighlight {
     position: relative;
-    z-index: -1;
     width: 100%;
     display: flex;
     align-items: center;
@@ -229,47 +223,89 @@ p {
     gap: 10px;
     padding: 10px;
     max-width: 1400px;
+    height: 100vh;
     margin: 0 auto;
-}
-
-#BCKHighlight h1 {
-    position: absolute;
     text-align: center;
-    top: 25%;
-    transform: translateY(-50%);
-}
-
-#BCKHighlight h2 {
-    position: absolute;
-    text-align: center;
-    top: 5%;
+  }
+  
+  #BCKHighlight h1,
+  #BCKHighlight h2 {
+    position: relative;
+    z-index: 0;
+    margin: 0;
+    text-align: center; /* Add text-align center to override the parent setting */
+  }
+  
+  #BCKHighlight h1 {
+    top: -40%;
+    font-size: 64px;
+    font-weight: 600;
+    font-family: 'Manrope', sans-serif;
+    line-height: normal;
+    color: #333333;
+    display: flex;
     justify-content: center;
-    transform: translateY(-50%);
-}
-
-#BCKHighlight img {
+    transform: translateX(75%);
+  }
+  
+  #BCKHighlight h2 {
+    top: -32%;
+    font-size: 24px;
+    font-weight: 500;
+    font-family: 'Manrope', sans-serif;
+    color: #333333;
+    line-height: normal;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    transform: translateX(-35%);
+  }
+  
+  h1, h2 {
+    margin: 0;
+    padding: 0;
+  }
+  
+  #BCKHighlight img {
+    position: absolute;
+    z-index: -1;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
     max-width: 100%;
     height: auto;
-}
-
-/* From Print to Web Section */
-
-#FromPrintToWeb {
+  }
+  
+  /* From Print to Web Section */
+  
+  #FromPrintToWeb {
     display: flex;
-    justify-content: center;
-    align-content: center;
-    background-color: #E9DDD7;
-    width: 1444px; 
-    height: 100vh;
-    flex-shrink: 0;
-}
-
-.textbox-container {
-    display: flex;
-    justify-content: center;
     align-items: center;
+    justify-content: center;
+    background-color: #E9DDD7;
+    width: 100%;
     height: 100vh;
-}
+    margin: 0 auto;
+    flex-shrink: 0;
+  }
+  
+  .textbox-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    font-family: 'Manrope', sans-serif;
+    font-size: 48px;
+    font-weight: 500;
+    color: #333333;
+    line-height: normal;
+  }
+  
+  .textbox-container p {
+    text-align: left;
+    margin: 0;
+  }
 
 /* Grid Gallery Section */
 
